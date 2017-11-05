@@ -9,7 +9,7 @@ import static org.junit.Assert.assertEquals;
  * - static method reference
  * - non-static method reference
  */
-public class FuncInterfaceTask {
+public class FuncInterfaceTask1 {
 
   private static class SumHelper {
     int sum(int a, int b){
@@ -43,19 +43,19 @@ public class FuncInterfaceTask {
     SumHelper sumHelper = new SumHelper();
 
     // Implement Summator using the method reference from the from the SumHelper object.
-    Summator f = null;
+    Summator f = sumHelper::sum;
     assertEquals(f.getSum(1, 2), 3);
 
     // Implement Printer using static method reference from System.out.
-    Printer p = null;
+    Printer p = System.out::println;
     p.print(f.getSum(5, 5));
 
     // Use contructor method reference to create MyInfo
-    Supplier<MyInfo> myInfoSupplier = null;
+    Supplier<MyInfo> myInfoSupplier = MyInfo::new;
     MyInfo info = makeInfo(myInfoSupplier);
 
     // Use containing type method reference to provide info from MyInfo
-    Supplier<String> infoSupplier = null;
+    Supplier<String> infoSupplier = info::info;
     System.out.println(infoSupplier.get());
   }
 }

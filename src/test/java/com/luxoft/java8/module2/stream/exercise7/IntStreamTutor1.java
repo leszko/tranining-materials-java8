@@ -1,4 +1,4 @@
-package com.luxoft.java8.module2.stream.exercise8;
+package com.luxoft.java8.module2.stream.exercise7;
 
 import static org.junit.Assert.assertEquals;
 

@@ -1,6 +1,6 @@
-package com.luxoft.java8.module2.stream.exercise7;
+package com.luxoft.java8.module2.stream.exercise6;
 
-import com.luxoft.java8.module2.stream.exercise7.model.Person;
+import com.luxoft.java8.module2.stream.exercise6.model.Person;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

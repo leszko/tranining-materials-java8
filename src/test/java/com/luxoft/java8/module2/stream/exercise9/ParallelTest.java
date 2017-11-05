@@ -1,4 +1,4 @@
-package com.luxoft.java8.module2.stream.exercise10;
+package com.luxoft.java8.module2.stream.exercise9;
 
 import java.util.Date;
 import java.util.concurrent.atomic.AtomicInteger;

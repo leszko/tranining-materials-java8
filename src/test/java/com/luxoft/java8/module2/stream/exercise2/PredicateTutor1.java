@@ -1,4 +1,4 @@
-package com.luxoft.java8.module2.stream.exercise3;
+package com.luxoft.java8.module2.stream.exercise2;
 
 import java.util.function.Predicate;
 import java.util.stream.Stream;

@@ -1,4 +1,4 @@
-package com.luxoft.java8.module2.stream.exercise9;
+package com.luxoft.java8.module2.stream.exercise8;
 
 import java.util.Arrays;
 import java.util.List;

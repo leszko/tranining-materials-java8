@@ -1,6 +1,5 @@
-package com.luxoft.java8.module2.stream.exercise3;
+package com.luxoft.java8.module2.stream.exercise2;
 
-import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 public class PredicateTutor {
@@ -12,13 +11,6 @@ public class PredicateTutor {
    * Program should print "three".
    */
   public static void main(String[] args) {
-
     Stream<String> stream = Stream.of("one", "two", "three", "four", "five");
-
-    Predicate<String> p1 = s -> s.length() > 3;
-
-    Predicate<String> p2 = Predicate.isEqual("two");
-    Predicate<String> p3 = Predicate.isEqual("three");
-
   }
 }

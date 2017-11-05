@@ -1,4 +1,4 @@
-package com.luxoft.java8.module2.stream.exercise7.model;
+package com.luxoft.java8.module2.stream.exercise6.model;
 
 public enum Gender {
 	Female("f"), Male("m");

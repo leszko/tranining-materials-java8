@@ -13,8 +13,8 @@ public class OptionalTutor1 {
     Optional<Integer> opt =
         list.stream()
             .reduce(Integer::max);
-    Integer result = opt.orElse(0);
 
+    Integer result = opt.orElse(0);
     Integer result2 = opt.orElseGet(() -> 2);
     Integer result3 = opt.orElseThrow(() -> new RuntimeException("cannot get max"));
 

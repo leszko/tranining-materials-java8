@@ -1,10 +1,10 @@
 package com.luxoft.java8.module2.stream.exercise7;
 
-import static org.junit.Assert.assertEquals;
-
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 import org.junit.Test;
+
+import java.util.stream.IntStream;
+
+import static org.junit.Assert.assertEquals;
 
 public class IntStreamTutor {
 
@@ -30,16 +30,18 @@ public class IntStreamTutor {
   @Test
   public void testIntStream() {
 
-    int max = intStream().max().getAsInt();
+    // Find the max number
+    int max = 0;
     log(max);
     assertEquals(max, 4);
 
-    int avg = (int) intStream().average().getAsDouble();
+    // Find the average number
+    int avg = 0;
     log(avg);
     assertEquals(avg, 3);
 
-    String distinct = intStream().distinct().
-        boxed().map(s -> s.toString()).collect(Collectors.joining(","));
+    // Find distinct values and collect them to a string separated by ","
+    String distinct = null;
     log(distinct);
     assertEquals(distinct, "2,3,4");
 

@@ -57,31 +57,6 @@ public class CollectorsTutor {
       System.out.println(ioe);
     }
 
-    // Find a person with a minimal age more than 20
-    Optional<Person> opt =
-        persons.stream().filter(p -> p.getAge() >= 20)
-            .min(Comparator.comparing(Person::getAge));
-    System.out.println(opt);
-
-    // Find a person with a maximal age
-    Optional<Person> opt2 =
-        persons.stream().max(Comparator.comparing(Person::getAge));
-    System.out.println(opt2);
-
-    // Group persons by their ages
-    Map<Integer, String> map =
-        persons.stream()
-            .collect(
-                Collectors.groupingBy(
-                    Person::getAge,
-                    Collectors.mapping(
-                        Person::getName,
-                        Collectors.joining(", ")
-                    )
-                )
-            );
-    System.out.println(map);
-
     // 1) Create a map which prints amount of person of each age
     //  use com.luxoft.java8.stream.collect(Collectors.groupingBy(Function, Collectors.mapping(Function, Collectors.counting())))
 

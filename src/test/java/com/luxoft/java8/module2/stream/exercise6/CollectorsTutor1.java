@@ -42,28 +42,6 @@ public class CollectorsTutor1 {
       System.out.println(ioe);
     }
 
-    Optional<Person> opt =
-        persons.stream().filter(p -> p.getAge() >= 20)
-            .min(Comparator.comparing(Person::getAge));
-    System.out.println(opt);
-
-    Optional<Person> opt2 =
-        persons.stream().max(Comparator.comparing(Person::getAge));
-    System.out.println(opt2);
-
-    Map<Integer, String> map =
-        persons.stream()
-            .collect(
-                Collectors.groupingBy(
-                    Person::getAge,
-                    Collectors.mapping(
-                        Person::getName,
-                        Collectors.joining(", ")
-                    )
-                )
-            );
-    System.out.println(map);
-
     // 1) Create a map which prints amount of person of each age
     Map<Integer, Long> map2 =
         persons.stream()

@@ -4,17 +4,17 @@ import java.util.stream.Stream;
 
 public class ReduceTutor {
 
-  public static Stream<String> getStream() {
-    return Stream.of("John Lennon", "Paul Mccartney",
-        "George Harrison", "Ringo Star");
-  }
+    public static Stream<String> getStream() {
+        return Stream.of("John Lennon", "Paul Mccartney",
+                "George Harrison", "Ringo Star");
+    }
 
-  /**
-   * Find the longest text in the com.luxoft.java8.stream in 2 ways and print it:
-   * - Using getStream().reduce()
-   */
-  public static void main(String[] args) {
-
-  }
+    /**
+     * Find the longest text and print it - use two different ways:
+     * - Using getStream().reduce()
+     * - Using Collectors.maxBy()
+     */
+    public static void main(String[] args) {
+    }
 
 }

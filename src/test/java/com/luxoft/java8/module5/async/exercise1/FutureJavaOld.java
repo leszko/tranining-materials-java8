@@ -1,20 +1,22 @@
 package com.luxoft.java8.module5.async.exercise1;
 
 import com.luxoft.java8.module5.async.base.CompletableFutureBase;
-import java.util.concurrent.Callable;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
 
-import org.junit.Test;
+import java.util.concurrent.*;
 
 public class FutureJavaOld extends CompletableFutureBase {
 
 	int result;
-	@Test
-	public void testFutureOldStyle() throws InterruptedException {		
+
+	public static void main(String[] args) throws InterruptedException, ExecutionException {
+		FutureJavaOld futureJavaOld = new FutureJavaOld();
+
+		futureJavaOld.useOldStyle();
+		futureJavaOld.useFuture();
+		futureJavaOld.useCompletableFuture();
+	}
+
+	public void useOldStyle() throws InterruptedException {
 		Thread t = new Thread() {
 			public void run() {
 				result = slowInit();				
@@ -22,11 +24,13 @@ public class FutureJavaOld extends CompletableFutureBase {
 		};
 		
 		t.start();
+
+		// wait for the async operation to finish
 		t.join();
 		System.out.println("futureTest() is finished: "+result);
 	}
 	
-	public void futureTest() 
+	public void useFuture()
 		throws InterruptedException, ExecutionException {
 	
 		Callable<Integer> r = this::slowInit;
@@ -34,12 +38,13 @@ public class FutureJavaOld extends CompletableFutureBase {
 				Executors.newFixedThreadPool(10);
 		Future<Integer> future = es.submit(r);
 
+		// wait for the async operation to finish and retrieve result
 		Integer res = future.get();
 
 		System.out.println("futureTest() is finished: "+res);
 	}
 	
-	public void promiseTestNext() 
+	public void useCompletableFuture()
 		throws InterruptedException, ExecutionException {
 			CompletableFuture<Void> future = 
 				CompletableFuture
@@ -50,6 +55,8 @@ public class FutureJavaOld extends CompletableFutureBase {
 				.thenRun(
 					() -> { System.out.println("look at results"); }
 				);
+
+			// wait to finish all 3 chained operations
 			future.get();
 			System.out.println("promiseTestNext() is finished");
 	}

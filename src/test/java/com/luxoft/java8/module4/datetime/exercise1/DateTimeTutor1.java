@@ -1,4 +1,4 @@
-package com.luxoft.java8.module4.datetime.exercise2;
+package com.luxoft.java8.module4.datetime.exercise1;
 
 import java.time.Duration;
 import java.time.Instant;

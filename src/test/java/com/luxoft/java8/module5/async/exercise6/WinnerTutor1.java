@@ -9,9 +9,6 @@ import org.junit.Test;
 
 public class WinnerTutor1 extends CompletableFutureBase {
 
-  /**
-   * Take the fastest of future1 and future2 and increment the result
-   */
   @Test
   public void testApplyToEither() throws Exception {
     long start = System.nanoTime();

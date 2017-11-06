@@ -9,10 +9,6 @@ import org.junit.Test;
 
 public class AsyncTutor1 extends CompletableFutureBase {
 
-  /**
-   * Modify this example by using asynchronous calls so that it was
-   * executing in 2 seconds
-   */
   @Test
   public void testThenCombineSync() throws Exception {
     long start = System.nanoTime();

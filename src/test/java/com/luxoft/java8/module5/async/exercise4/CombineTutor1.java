@@ -9,9 +9,6 @@ import org.junit.Test;
 
 public class CombineTutor1 extends CompletableFutureBase {
 
-  /**
-   * Define future3 as sum of future1 and future2 results (use thenCombine)
-   */
   @Test
   public void testThenCombine() throws Exception {
     CompletableFuture<Integer> future1 = CompletableFuture

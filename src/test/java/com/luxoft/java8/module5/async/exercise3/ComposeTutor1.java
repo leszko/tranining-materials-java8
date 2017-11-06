@@ -3,15 +3,13 @@ package com.luxoft.java8.module5.async.exercise3;
 import static org.junit.Assert.assertEquals;
 
 import com.luxoft.java8.module5.async.base.CompletableFutureBase;
+import org.junit.Test;
+
 import java.util.concurrent.CompletableFuture;
 
 public class ComposeTutor1 extends CompletableFutureBase {
 
-  /**
-   * 1) Define thenCompose as CompletableFuture
-   * 2) Use thenCompose() to put result of future1 into thenCompose
-   * 3) perform slowIncrement for thenCompose
-   */
+  @Test
   public void promiseTestCompose2() throws Exception {
     CompletableFuture<Integer> future1 =
         CompletableFuture.supplyAsync(this::slowInit) // 1

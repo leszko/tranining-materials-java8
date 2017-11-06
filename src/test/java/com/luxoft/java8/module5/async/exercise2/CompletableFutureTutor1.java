@@ -1,18 +1,15 @@
 package com.luxoft.java8.module5.async.exercise2;
 
-import static org.junit.Assert.assertEquals;
-
 import com.luxoft.java8.module5.async.base.CompletableFutureBase;
+import org.junit.Test;
+
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
-import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class CompletableFutureTutor1 extends CompletableFutureBase {
 
-
-  /**
-   * Initialize CompletableFuture with slowInit, then perform slow increment 2 times
-   */
   @Test
   public void promiseTestInc() throws Exception {
     long start = System.nanoTime();
